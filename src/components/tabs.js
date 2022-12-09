@@ -12,8 +12,27 @@ const Tabs = (topics) => {
   //   <div class="tab">bootstrap</div>
   //   <div class="tab">technology</div>
   // </div>
-  //
+  
+
+  const topicDiv = document.createElement("div");
+  topicDiv.classList.add("topics");
+
+  // create tabs
+  for(let i = 0; i < topics.length; i++) {
+    const newTab = document.createElement("div");
+    newTab.classList.add("tab");
+    newTab.textContent = topics[i];
+
+    topicDiv.appendChild(newTab);
+  }
+
+  return topicDiv;
 }
+
+// Tabs() test
+// console.log(Tabs(['javascript', 'bootstrap', 'technology']));
+
+
 
 const tabsAppender = (selector) => {
   // TASK 4
