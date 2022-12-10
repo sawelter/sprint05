@@ -1,3 +1,4 @@
+// Card = function; article = object (w/ strings: headline, authorPhoto, authorName)
 const Card = (article) => {
   // TASK 5
   // ---------------------
@@ -17,7 +18,41 @@ const Card = (article) => {
   //   </div>
   // </div>
   //
+
+
+
+  // Create elements
+  const card = document.createElement("div");
+  const headlineTitle = document.createElement("div");
+  const authorContainer = document.createElement("div");
+  const imgContainer = document.createElement("div");
+  const img = document.createElement("img");
+  const author = document.createElement("span");
+
+  // Set classes
+  card.classList.add("card");
+  headlineTitle.classList.add("headline");
+  authorContainer.classList.add("author");
+  imgContainer.classList.add("img-container");
+
+  // Set content
+  headlineTitle.textContent = `{ ${article.headline} }`;
+  img.src = article.authorPhoto;
+  author.textContent = `By { ${article.authorName} }`
+
+  card.appendChild(headlineTitle);
+  card.appendChild(authorContainer);
+  authorContainer.appendChild(imgContainer);
+  imgContainer.appendChild(img);
+  authorContainer.appendChild(author);
+
+
+  return card;
 }
+
+console.log(Card({headline: "Breaking News: Satire is outlawed", authorName: "Author McAuthor", authorPhoto: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=800"}));
+
+
 
 const cardAppender = (selector) => {
   // TASK 6
