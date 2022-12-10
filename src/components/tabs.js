@@ -25,7 +25,6 @@ const Tabs = (topics) => {
 
     topicDiv.appendChild(newTab);
   }
-  console.log(topicDiv);
 
   return topicDiv;
 }

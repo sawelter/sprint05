@@ -24,9 +24,9 @@ const Header = (title, date, temp) => {
   tempElement.classList.add('temp');
 
   // Add content
-  dateElement.textContent = `{ ${date} }`;
-  titleElement.textContent = `{ ${title} }`;
-  tempElement.textContent = `{ ${temp} }`;
+  dateElement.textContent = `${date}`;
+  titleElement.textContent = `${title}`;
+  tempElement.textContent = `${temp}`;
 
   // Structure the header
   header.appendChild(dateElement);
